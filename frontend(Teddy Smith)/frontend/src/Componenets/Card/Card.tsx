@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import "./Card.css";
 interface Props {
   companyName: string;
@@ -6,7 +6,11 @@ interface Props {
   price: string;
 }
 
-const Card = ({ companyName, ticker, price }: Props) => {
+const card: React.FC<Props> = ({
+  companyName,
+  ticker,
+  price,
+}: Props): JSX.Element => {
   return (
     <div className="card">
       <img src="sillybird.jpeg" alt="Image" />
@@ -26,4 +30,4 @@ const Card = ({ companyName, ticker, price }: Props) => {
   );
 };
 
-export default Card;
+export default card;
