@@ -9,8 +9,6 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-console.log(searchCompanies("aapl"));
-
 root.render(
   <React.StrictMode>
     <App />
