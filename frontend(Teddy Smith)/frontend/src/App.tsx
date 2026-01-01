@@ -27,11 +27,19 @@ function App() {
     console.log(searchResult);
   };
 
+  const onPortfolioCreate = (e: SyntheticEvent) => {
+    e.preventDefault();
+    console.log(e);
+  };
+
   return (
     <div className="App">
       <Search onClick={onClick} search={search} handleChange={handleChange} />
       {serverError && <h1>{serverError}</h1>}
-      <CardList searchResult={searchResult} />
+      <CardList
+        searchResult={searchResult}
+        onPortfolioCreate={onPortfolioCreate}
+      />
     </div>
   );
 }
