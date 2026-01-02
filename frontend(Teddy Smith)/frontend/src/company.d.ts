@@ -10,31 +10,32 @@ export interface CompanyProfile {
   symbol: string;
   price: number;
   beta: number;
-  volAvg: number;
-  mktCap: number;
-  lastDiv: number;
+  lastDividend: number;
   range: string;
-  changes: number;
+  change: number;
+  changePercentage: number;
+  volume: number; // new (was missing)
+  averageVolume: number; // renamed from volAvg
+  marketCap: number;
   companyName: string;
   currency: string;
   cik: string;
   isin: string;
+  cusip: string; // new
+  exchangeFullName: string; // renamed from exchange
   exchange: string;
-  exchangeShortName: string;
   industry: string;
   website: string;
   description: string;
   ceo: string;
   sector: string;
-  counter: string;
+  country: string; // new (was missing)
   fullTimeEmployees: string;
   phone: string;
   address: string;
   city: string;
   state: string;
   zip: string;
-  dcfDiff: number;
-  dcf: number;
   image: string;
   ipoDate: string;
   defaultImage: boolean;
